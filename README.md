@@ -1,0 +1,2 @@
+# FM Synth Project 
+This is a fun project I started to make a "Frequency Modulated" synthesizer in `python` programming language. I hava a huge interest in electronic music and sound design and also, I studied computer engineering. So, what could be better than a signal/sound processing project? And this is why I started study about how to create and process signals in python and started this project. 
