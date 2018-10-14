@@ -6,3 +6,4 @@
 3. [Music Programming](https://en.wikipedia.org/wiki/Programming_(music))
 
 ## Internal Links
+1. [Sine Wave](./sine-wave.md)
