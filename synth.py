@@ -13,6 +13,9 @@ class Synth:
         print("Samples per second:", self.sps)
         print("Duration:", self.duration_s, "seconds")
 
+    def sine_wave_generator(self):
+        pass 
+
 
 
 synth = Synth(440, 44100, 5)
