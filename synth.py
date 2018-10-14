@@ -30,4 +30,4 @@ class Synth:
 
 synth = Synth(440.0, 44100, 5.0)
 synth.print_info()
-print(synth.sine_wave_generator())
+#print(synth.sine_wave_generator())
