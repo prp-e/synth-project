@@ -1,5 +1,5 @@
 import numpy as np 
-from scipy.io.wavefile import wavfile 
+from scipy.io.wavfile import write
 
 class Synth:
 
