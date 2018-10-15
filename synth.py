@@ -20,10 +20,10 @@ class Synth:
     def sine_wave_generator(self):
         sample_number = np.arange(self.duration_s * self.sps)
         waveform = np.sin(2 * np.pi * sample_number * self.freq / self.sps)
-        waveform_queit = waveform * self.quiet_factor 
+        waveform_quiett = waveform * self.quiet_factor 
         #waveform_integer = np.int16(waveform_queit * (2**15))
 
-        return waveform_queit
+        return waveform_quiet
 
     def sine_wave_amplitude_modulation(self, modulator_freq=0.25, ac=1.0, ka=0.25):
         t_samples = np.arange(self.sps * self.duration_s)
