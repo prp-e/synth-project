@@ -25,6 +25,9 @@ class Synth:
 
         return waveform_integer
 
+    def sine_wave_amplitude_modulation(self, modulator_freq):
+        pass
+
     def write_to_file(self, name="synthesizedWave.wav"):
         #to be redefined later. 
        return write(name, self.sps, self.sine_wave_generator())
@@ -33,7 +36,7 @@ class Synth:
 
 
 
-synth = Synth(440.0, 44100, 5.0, 0.8)
+synth = Synth(660.0, 44100, 5.0, 0.8)
 synth.print_info()
 #print(synth.sine_wave_generator())
 synth.write_to_file()
