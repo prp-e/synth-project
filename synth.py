@@ -24,9 +24,14 @@ class Synth:
         waveform_integer = np.int16(waveform_queit * (2**15))
 
         return waveform_integer
-
-    def sine_wave_amplitude_modulation(self, modulator_freq):
-        pass
+'''
+    def sine_wave_amplitude_modulation(self, modulator_freq=0.25, ac=1.0, ka=0.25):
+        modulator = Synth(modulator_freq, self.sps, self.duration_s, 0.3)
+        modulator = modulator.sine_wave_generator() 
+        envelope = (ac * (1.0 + ka * modulator)) * self.quiet_factor
+        modulated_signal = self.sine_wave_generator() * modulator 
+'''
+        return modulated_signal
 
     def write_to_file(self, name="synthesizedWave.wav"):
         #to be redefined later. 
@@ -36,7 +41,7 @@ class Synth:
 
 
 
-synth = Synth(660.0, 44100, 5.0, 0.8)
+synth = Synth(440.0, 44100, 5.0, 0.3)
 synth.print_info()
 #print(synth.sine_wave_generator())
 synth.write_to_file()
