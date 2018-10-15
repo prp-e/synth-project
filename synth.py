@@ -20,7 +20,7 @@ class Synth:
     def sine_wave_generator(self):
         sample_number = np.arange(self.duration_s * self.sps)
         waveform = np.sin(2 * np.pi * sample_number * self.freq / self.sps)
-        waveform_quiett = waveform * self.quiet_factor 
+        waveform_quiet = waveform * self.quiet_factor 
         #waveform_integer = np.int16(waveform_queit * (2**15))
 
         return waveform_quiet
@@ -33,9 +33,9 @@ class Synth:
 
         return modulated_signal
 
-    def write_to_file(self, name="synthesizedWave.wav"):
+    def write_to_file(self, default_method, name="synthesizedWave.wav"):
         #to be redefined later. 
-       return write(name, self.sps, self.sine_wave_amplitude_modulation())
+        return write(name, self.sps, default_method)
     
 
 
@@ -44,4 +44,4 @@ class Synth:
 synth = Synth(440.0, 44100, 5.0)
 synth.print_info()
 #print(synth.sine_wave_generator())
-synth.write_to_file()
+synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
