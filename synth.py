@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 class Synth:
 
-    def __init__(self, freq, sps, duration_s, quiet_factor):
+    def __init__(self, freq, sps, duration_s, quiet_factor=0.8):
         self.freq = freq
         self.sps  = sps  #Samples per second
         self.duration_s = duration_s
@@ -41,7 +41,7 @@ class Synth:
 
 
 
-synth = Synth(440.0, 44100, 5.0, 0.3)
+synth = Synth(440.0, 44100, 5.0)
 synth.print_info()
 #print(synth.sine_wave_generator())
 synth.write_to_file()
