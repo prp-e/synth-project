@@ -22,3 +22,5 @@ See the [docs](./docs) folder for documents.
 ![Sine Wave - A - 440Hz](./sineWave.png)
 
 ### Square Wave
+
+![Square Wave - A - 440Hz](./squareWave.png)
