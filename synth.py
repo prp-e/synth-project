@@ -35,8 +35,8 @@ class Synth:
 
     def square_wave_generator(self):
         sample_number = np.arange(self.duration_s * self.sps)
-        waveform = 0 
-        waveform_queit = waveform * self.quiet_factor
+        waveform = np.sign(np.sin(self.freq * sample_number)) 
+        waveform_quiet = waveform * self.quiet_factor
 
         return waveform_quiet
 
@@ -52,3 +52,4 @@ synth = Synth(440.0, 44100, 5.0)
 synth.print_info()
 #print(synth.sine_wave_generator())
 synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
+synth.write_to_file(synth.square_wave_generator(), "Square.wav")
