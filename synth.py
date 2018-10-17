@@ -27,7 +27,7 @@ class Synth:
 
     def sine_wave_amplitude_modulation(self, modulator_freq=0.25, ac=1.0, ka=0.25):
         t_samples = np.arange(self.sps * self.duration_s)
-        modulator = np.sin(2 * np.pi * t_samples / self.sps) 
+        modulator = np.sin(2 * np.pi * t_samples * modulator_freq / self.sps) 
         envelope = ac * (1.0 + ka * modulator)
         modulated_signal = self.sine_wave_generator() * envelope 
 
