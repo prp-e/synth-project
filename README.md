@@ -17,4 +17,8 @@ See the [docs](./docs) folder for documents.
 
 ## Example output
 
+### Sine Wave
+
 ![Sine Wave - A - 440Hz](./sineWave.png)
+
+### Square Wave
