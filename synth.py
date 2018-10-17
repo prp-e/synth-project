@@ -40,6 +40,9 @@ class Synth:
 
         return waveform_quiet
 
+    def square_wave_amplitude_modulation(self, modulator_freq=0.25, ac=1.0, ka=0.25):
+        pass
+
     def write_to_file(self, default_method, name="synthesizedWave.wav"):
         #to be redefined later. 
         return write(name, self.sps, default_method)
