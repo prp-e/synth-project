@@ -34,7 +34,11 @@ class Synth:
         return modulated_signal
 
     def square_wave_generator(self):
-        pass
+        sample_number = np.arange(self.duration_s * self.sps)
+        waveform = 0 
+        waveform_queit = waveform * self.quiet_factor
+
+        return waveform_quiet
 
     def write_to_file(self, default_method, name="synthesizedWave.wav"):
         #to be redefined later. 
