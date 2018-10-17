@@ -56,5 +56,5 @@ synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
 synth.write_to_file(synth.sine_wave_amplitude_modulation(0.25, 0.5, 1.5), "Modified-Sine.wav")
 synth.write_to_file(synth.square_wave_generator(), "Square.wav")
 
-fm_signal = synth2.sine_wave_generator() + synth.square_wave_generator()
-synth.write_to_file(fm_signal, "FM.wav")
+#fm_signal = synth2.sine_wave_generator() + synth.square_wave_generator()
+#synth.write_to_file(fm_signal, "FM.wav")
