@@ -33,6 +33,9 @@ class Synth:
 
         return modulated_signal
 
+    def square_wave_generator(self):
+        pass
+
     def write_to_file(self, default_method, name="synthesizedWave.wav"):
         #to be redefined later. 
         return write(name, self.sps, default_method)
