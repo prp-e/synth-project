@@ -4,10 +4,10 @@ This is a fun project I started to make a "Frequency Modulated" synthesizer in `
 for this project, I used [numpy](http://numpy.org) and [scipy](http://scipy.org) for making signals and also, writing them to files. 
 
 ## Goals 
-* Generating Sine Waves (with user's desired frequency) - partly done
-* Generating Square Waves (with user's desired frequency)
+* Generating Sine Waves (with user's desired frequency) -  done
+* Generating Square Waves (with user's desired frequency) - done 
 * Generating Sawtooth Waves (with user's desired frequency)
-* Amplitude Modulations 
+* Amplitude Modulations - partly done
 * Frequency Modulations 
 * Applying FX (distortion, delay, reverb)
 * Live controls for modulation and applying FX (like DX7 for example!)
