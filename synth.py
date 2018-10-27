@@ -72,7 +72,7 @@ synth.write_to_file(synth.sine_wave_amplitude_modulation(0.75, 0.5, 0.5 ), "Modi
 synth.write_to_file(synth.square_wave_generator(), "Square.wav")
 
 synth2.write_to_file(synth2.square_wave_generator(), "Square2.wav")
-synth2.write_to_file(synth2.square_wave_amplitude_modulation(), "SquareMod.wav")
+#synth2.write_to_file(synth2.square_wave_amplitude_modulation(), "SquareMod.wav")
 
 #fm_signal = synth2.sine_wave_generator() + synth.square_wave_generator()
 #synth.write_to_file(fm_signal, "FM.wav")
