@@ -35,13 +35,21 @@ class Synth:
 
     def square_wave_generator(self):
         sample_number = np.arange(self.duration_s * self.sps)
-        waveform = np.sign(np.sin(self.freq * sample_number)) 
+        waveform = np.sign(np.sin(2* np.pi * self.freq * sample_number/self.sps)) 
         waveform_quiet = waveform * self.quiet_factor
 
         return waveform_quiet
 
     def square_wave_amplitude_modulation(self, modulator_freq=0.25, ac=1.0, ka=0.25):
-        pass
+        '''
+        t_samples = np.arange(self.sps * self.duration_s)
+        modulator = np.sign(np.sin(2 * np.pi * modulator_freq * t_samples))
+        envelope = ac * (1.0 + ka * modulator)
+        modulated_signal = self.square_wave_generator() + envelope 
+
+        return modulated_signal
+        '''
+        pass 
 
     def write_to_file(self, default_method, name="synthesizedWave.wav"):
         #to be redefined later. 
@@ -58,6 +66,9 @@ synth.print_info()
 synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
 synth.write_to_file(synth.sine_wave_amplitude_modulation(0.75, 0.5, 0.5 ), "Modified-Sine.wav")
 synth.write_to_file(synth.square_wave_generator(), "Square.wav")
+
+synth2.write_to_file(synth2.square_wave_generator(), "Square2.wav")
+synth2.write_to_file(synth2.square_wave_amplitude_modulation(), "SquareMod.wav")
 
 #fm_signal = synth2.sine_wave_generator() + synth.square_wave_generator()
 #synth.write_to_file(fm_signal, "FM.wav")
