@@ -1,5 +1,6 @@
 import numpy as np 
 from scipy.io.wavfile import write
+from scipy import signal 
 import matplotlib.pyplot as plt 
 
 
