@@ -24,3 +24,7 @@ See the [docs](./docs) folder for documents.
 ### Square Wave
 
 ![Square Wave - A - 440Hz](./squareWave.png)
+
+### Sawtooth Wave
+
+![Sawtooth Wave - A - 220Hz](./Sawtooth.png)
