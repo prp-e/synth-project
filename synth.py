@@ -53,7 +53,11 @@ class Synth:
         pass 
 
     def sawtooth_wave_generator(self): 
-        pass 
+        sample_number = np.arange(self.duration_s * self.sps)
+        waveform = signal.sawtooth((2 * np.pi * self.freq * sample_number)/self.sps)
+        waveform_quiet = waveform * self.quiet_factor 
+
+        return waveform_quiet
 
     def write_to_file(self, default_method, name="synthesizedWave.wav"):
         #to be redefined later. 
@@ -66,12 +70,14 @@ class Synth:
 synth = Synth(440.0, 44100, 10.0, 0.3)
 synth2 = Synth(220.0, 44100, 5.0 , 0.2)
 synth.print_info()
-#print(synth.sine_wave_generator())
-synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
-synth.write_to_file(synth.sine_wave_amplitude_modulation(0.75, 0.5, 0.5 ), "Modified-Sine.wav")
-synth.write_to_file(synth.square_wave_generator(), "Square.wav")
+synth2.print_info()
 
-synth2.write_to_file(synth2.square_wave_generator(), "Square2.wav")
+synth2.write_to_file(synth2.sawtooth_wave_generator(), "Sawtooth.wav")
+#print(synth.sine_wave_generator())
+# synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
+# synth.write_to_file(synth.sine_wave_amplitude_modulation(0.75, 0.5, 0.5 ), "Modified-Sine.wav")
+# synth.write_to_file(synth.square_wave_generator(), "Square.wav")
+
 #synth2.write_to_file(synth2.square_wave_amplitude_modulation(), "SquareMod.wav")
 
 #fm_signal = synth2.sine_wave_generator() + synth.square_wave_generator()
