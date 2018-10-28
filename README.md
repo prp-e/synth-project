@@ -6,7 +6,7 @@ for this project, I used [numpy](http://numpy.org) and [scipy](http://scipy.org)
 ## Goals 
 * Generating Sine Waves (with user's desired frequency) -  done
 * Generating Square Waves (with user's desired frequency) - done 
-* Generating Sawtooth Waves (with user's desired frequency)
+* Generating Sawtooth Waves (with user's desired frequency) - done 
 * Amplitude Modulations - partly done
 * Frequency Modulations 
 * Applying FX (distortion, delay, reverb)
