@@ -42,14 +42,6 @@ class Synth:
         return waveform_quiet
 
     def square_wave_amplitude_modulation(self, modulator_freq=0.25, ac=1.0, ka=0.25):
-        '''
-        t_samples = np.arange(self.sps * self.duration_s)
-        modulator = np.sign(np.sin(2 * np.pi * modulator_freq * t_samples))
-        envelope = ac * (1.0 + ka * modulator)
-        modulated_signal = self.square_wave_generator() + envelope 
-
-        return modulated_signal
-        '''
         pass 
 
     def sawtooth_wave_generator(self): 
