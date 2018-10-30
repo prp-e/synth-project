@@ -28,5 +28,5 @@ is affected by a control voltage (CV), coming from an envelope generator, an LFO
 ## Other sound processing effects units
 such as ring modulators and fuzz bass pedals may be encountered
 
-![Synth](./synth-components-01.png)
+![Synth](./docs/Synthesizer.components.01.png)
 
