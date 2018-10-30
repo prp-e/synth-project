@@ -8,3 +8,4 @@
 ## Internal Links
 1. [Sine Wave](./sine-wave.md)
 2. [Software you need](./software-you-need.md)
+3. [Synth Components](./synth-components.md)
