@@ -11,6 +11,7 @@ for this project, I used [numpy](http://numpy.org) and [scipy](http://scipy.org)
 * Frequency Modulations 
 * Applying FX (distortion, delay, reverb)
 * Live controls for modulation and applying FX (like DX7 for example!)
+* Adding Re-sampler 
 
 ## Documents 
 See the [docs](./docs) folder for documents. 
