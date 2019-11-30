@@ -60,13 +60,13 @@ class Synth:
 
 
 synth = Synth(440.0, 44100, 10.0, 0.3)
-synth2 = Synth(220.0, 44100, 5.0 , 0.2)
+#synth2 = Synth(220.0, 44100, 5.0 , 0.2)
 synth.print_info()
-synth2.print_info()
+#synth2.print_info()
 
-synth2.write_to_file(synth2.sawtooth_wave_generator(), "Sawtooth.wav")
+#synth2.write_to_file(synth2.sawtooth_wave_generator(), "Sawtooth.wav")
 #print(synth.sine_wave_generator())
-# synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
+synth.write_to_file(synth.sine_wave_generator(), "Sine.wav")
 # synth.write_to_file(synth.sine_wave_amplitude_modulation(0.75, 0.5, 0.5 ), "Modified-Sine.wav")
 # synth.write_to_file(synth.square_wave_generator(), "Square.wav")
 
